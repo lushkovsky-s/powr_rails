@@ -1,0 +1,28 @@
+<h1>Done</h1>
+<p>Login and user info obtaining are successfully finished</p>
+<h2>Profile info</h2>
+<table>
+    <tbody>
+        <% @user_info.each do |key, value| %>
+        <tr>
+            <td><b><%= key %>:</b></td>
+            <td><%= value %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+<h2>Repositorites</h2>
+<ul>
+    <% @repositories.each do |repo| %>
+        <li>
+            <b><a href="<%= repo['html_url'] %>"><%= repo['name'] %></a></b>
+            <div><u>Description:</u> <%= repo['description'] %></div> 
+            <div>
+                <span><%= repo['private'] ? 'Private' : 'Public' %>;</span>
+                <span><%= repo['fork'] ? 'Fork' : 'Not fork' %>;</span> 
+                <span>Created <%= repo['created_at'] %></span> 
+            </div>
+            <div>Default branch: <%= repo['default_branch'] %></div> 
+        </li>
+    <% end %>
+</ul>

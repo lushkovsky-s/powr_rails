@@ -1,0 +1,20 @@
+
+<div class="login_form">
+    <h1>GitHub login</h1>
+    <p>Click on the button to pass the oauth</p>
+
+    <button id="button" class="login_form__btn">
+        <%= image_tag("github-logo.png", :class => "login_form__btn__logo", :alt => "github logo") %>
+        <span class="login_form__btn__text">Authorize</span>
+    </button>
+</div>
+
+<script>
+    window.onload = () => {
+        const buttonEl = document.getElementById('button')
+
+        buttonEl.onclick = () => {
+            window.open('<%= @onclick_url %>')
+        }
+    }
+</script>

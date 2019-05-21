@@ -1,0 +1,24 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.login_form {
+    text-align: center; 
+    margin-top: 100px;
+
+    .login_form__btn {
+        background: white;
+        border: 1px solid gray;
+        border-radius: 3px;
+        padding: 8px 20px; 
+
+        .login_form__btn__text {
+            vertical-align: middle;
+        }
+
+        .login_form__btn__logo {
+            width: 30px;
+            margin: 0 3px;
+        }
+    }
+}
